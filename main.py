@@ -8,7 +8,15 @@ def home():
 
 @app.route('/kontakti')
 def kontakti():
-    return "<html><h1>Kontakti</h1><p>Māris Danne</p></html>"
+    return render_template('kontakti.html')
+
+@app.route('/parmani')
+def parmani():
+    return render_template('parmani.html')
+
+@app.route('/jaunumi')
+def jaunumi():
+    return render_template('jaunumi.html')
 
 if __name__ == '__main__':
     app.run(port=80, debug=True)

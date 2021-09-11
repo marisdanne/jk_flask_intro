@@ -19,10 +19,10 @@
   <div class="col-lg-8 mx-auto p-3 py-md-5">
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="/" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="/jaunumi" class="nav-link">Jaunumi</a></li>
-        <li class="nav-item"><a href="/parmani" class="nav-link">Par mani</a></li>
-        <li class="nav-item"><a href="/kontakti" class="nav-link">Kontakti</a></li>
+        <li class="nav-item"><a href="/" class="nav-link {% if aktiva_lapa == 'home' %} active {% endif %}">Home</a></li>
+        <li class="nav-item"><a href="/jaunumi" class="nav-link {% if aktiva_lapa == 'jaunumi' %} active {% endif %}">Jaunumi</a></li>
+        <li class="nav-item"><a href="/parmani" class="nav-link {% if aktiva_lapa == 'parmani' %} active {% endif %}">Par mani</a></li>
+        <li class="nav-item"><a href="/kontakti" class="nav-link {% if aktiva_lapa == 'kontakti' %} active {% endif %}">Kontakti</a></li>
       </ul>
     </header>
 

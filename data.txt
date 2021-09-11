@@ -1,7 +1,3 @@
-kā
-Māris kaķis suņi
-eqqweqw
-asdasd
-qe3ewf
-456y45trhg
-234r2wef24
+Māris,Danne,Super auto
+Pēteris,Lielais,Super dators
+Anna,Mazā,Super lietussargs

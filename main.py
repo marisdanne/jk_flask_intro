@@ -35,7 +35,17 @@ def postData():
 @app.route('/lasitDatus')
 def lasitDatus():
     rindinas = lasitRindinas()
-    return render_template("dati.html", rindinas = rindinas)
+    dati = []
+    dati2 = []
+    for rindina in rindinas:
+        ieraksts = rindina.split(',')
+        #print(rindina)
+        #print(ieraksts)
+        dati.append(ieraksts)
+        dati2.append({'vards':ieraksts[0], 'uzvards':ieraksts[1], 'hobijs':ieraksts[2]})
+
+    #print(dati)
+    return render_template("dati.html", rindinas = dati, rindinas2 = dati2)
 
 
 if __name__ == '__main__':

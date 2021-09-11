@@ -5,4 +5,8 @@
 {% block saturs %}
     <h1>Kontakti</h1>
     <p class="fs-5 col-md-8">Māris Danne</p>
+    <form method="POST" action='/postData'>
+        <label >Vārds: <input type="text" name="vards"></label>
+        <input type="submit" value="Submit">
+    </form>
 {% endblock %}

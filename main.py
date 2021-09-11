@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from file_proc import pievienot
+from file_proc import pievienot, lasitRindinas
 
 app = Flask(__name__)
 
@@ -9,7 +9,8 @@ def home():
 
 @app.route('/kontakti')
 def kontakti():
-    return render_template('kontakti.html')
+    status = request.args.get('status')
+    return render_template('kontakti.html', veiksmigi = status)
 
 @app.route('/parmani')
 def parmani():
@@ -27,9 +28,15 @@ def postData():
         #print(request.form)
         vards = request.form.get('vards')
         pievienot(vards)
-        return redirect('/kontakti')
+        return redirect('/kontakti?status=1')
     else:
         return "This method not supported!"
+
+@app.route('/lasitDatus')
+def lasitDatus():
+    rindinas = lasitRindinas()
+    return render_template("dati.html", rindinas = rindinas)
+
 
 if __name__ == '__main__':
     app.run(port=80, debug=True)
